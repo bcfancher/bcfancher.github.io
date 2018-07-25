@@ -1,0 +1,136 @@
+body {
+  padding: 20px 10px 10px 10px;
+}
+/*div, p, a, span {
+  border: 1px solid red;
+}*/
+div#root {
+  width: 100%;
+  height: 100%;
+  font-size: 11px;
+  font-family: arial;
+}
+div#layout {
+  width: 650px;
+  margin: auto;
+  border: 1px solid black;
+}
+div#header {
+  border-bottom: 1px solid black;
+  height: 100px;
+}
+form#search-form {
+  padding: 50px 0 0px 20px;
+}
+div#pagination {
+  position: relative;
+  width: 100%;
+  height: 30px;
+  font-size: 9px;
+}
+div#pagination p.total {
+  position: absolute;
+  left: 11px;
+  top: 6px;
+}
+div#pagination p {
+  padding: 0;
+  margin: 0;
+}
+div#pagination div.navigate {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  text-indent: -10000px;
+}
+div#pagination div.navigate label {
+  display: block;
+  position: absolute;
+}
+div#pagination div.navigate ul {
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+div#pagination div.navigate ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+div#pagination div.navigate ul li.previous {
+  position: absolute;
+  top: 0;
+  left: -19px;
+}
+div#pagination div.navigate ul li.next {
+  position: absolute;
+  top: 0;
+  right: -19px;
+
+}
+div#pagination div.navigate ul li.current {
+  text-indent: 0;
+  text-align: center;
+  padding: 1px 0;
+}
+div#pagination div.navigate ul li.previous a,
+div#pagination div.navigate ul li.next a {
+  display: block;
+  width: 9px;
+  height: 12px;
+  background-image: url("../img/arrows.png");
+}
+div#pagination div.navigate ul li.next a {
+  background-position: -9px 0;
+}
+p.stream {
+  margin: 0;
+}
+p.stream a {
+  display: block;
+  position: relative;
+  text-decoration: none;
+  color: black;
+  overflow: hidden;
+  margin-bottom: 14px;
+}
+p.stream a span.image {
+  display: block;
+  float: left;
+  margin-left: 17px;
+}
+p.stream a span.image img {
+  width: 100px;
+}
+p.stream a span.heading {
+    display: block;
+    top: 0;
+    position: relative;
+    font-size: 19px;
+    text-decoration: none;
+    float: right;
+    width: 316px;
+    padding-left: 20px;
+    margin: 0 196px 8px 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+p.stream a span.description {
+  display: block;
+  position: relative;
+  font-size: 12px;
+  text-decoration: none;
+  float: right;
+  width: 316px;
+  padding-left: 24px;
+  margin: 0 192px 8px 0;
+}
+p.stream a span.description:last-child {
+  border-bottom: 1px solid #f1f1f1;
+  padding-bottom: 8px;
+}
+div#loadingResults {
+  padding: 100px;
+  text-align: center;
+}
