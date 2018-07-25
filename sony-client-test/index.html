@@ -1,1 +1,70 @@
-Sony Client Test
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>BCFancher Sony Client Test</title>
+  <meta name="description" content="BCFancher Sony Client Test">
+  <meta name="author" content="Brandon Fancher">
+
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+
+  <div id="root">
+    <div id="layout">
+      <div id="header">
+
+        <form id="search-form">
+          <input type="search" name="search" value="Search Query..." required>
+          <button>Search</button>
+        </form>
+
+      </div>
+
+      <div id="body"></div>
+    </div>
+  </div>
+
+  <script type="text/html" id="loadingResults.tpl">
+    <div id="loadingResults">LOADING RESULTS... PLEASE WAIT</div>
+  </script>
+
+  <script type="text/html" id="streamResults.tpl">
+    <div id="pagination">
+      <p class="total">Total Results: {numResults}</p>
+      <div class="navigate">
+        <label>Navigate Pages:</label>
+        <ul id="pagination-links">
+          <li class="current">{currentPage}/{totalPages}</li>
+          <li class="previous"><a href="#" class="previousLink">Previous Page</a></li>
+          <li class="next"><a href="#" class="nextLink">Next Page</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="container"></div>
+  </script>
+
+  <script type="text/html" id="streamRecord.tpl">
+    <p class="stream">
+      <a href="{streamUrl}" title="{streamTitle}">
+        <span class="image"><img src="{streamImage}" /></span>
+        <span class="heading">{streamTitle}</span>
+        <span class="description">{gameName} - {numViewers} viewers</span>
+        <span class="description">{streamDesc}</span>
+      </a>
+    </p>
+  </script>
+
+  <script type="module" src="js/StreamSearch.js"></script>
+
+</body>
+</html>
