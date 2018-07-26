@@ -102,6 +102,7 @@ class StreamSearch {
   }
 
   populateSearchResults(responseJson) {
+    console.log(responseJson);
     let body = document.getElementById('body');
     this.props.totalPages = Math.ceil(responseJson._total / 10);
     this.props.currentPage = (this.props.currentOffset + this.props.resultsPerPage) / this.props.resultsPerPage;
@@ -164,7 +165,7 @@ class StreamSearch {
     for (let i=0; i<responseJson.streams.length; i++) {
       let record = responseJson.streams[i];
       resultHtml += Util.loadTemplate('streamRecord.tpl', {
-        streamUrl:    record._links.self,
+        streamUrl:    record.channel.url,
         streamTitle:  record.channel.display_name,
         streamImage:  record.preview.medium,
         gameName:     record.game,
